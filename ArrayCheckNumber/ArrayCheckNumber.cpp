@@ -50,11 +50,8 @@ short CheckNumber(int arr[100], int arrlength, int Number)
 
 bool NumberInArray(int arr[100], int arrlength, int Number)
 {
-    if (CheckNumber(arr, arrlength, Number) == -1){
-         return true;
-    }
 
-	return  false;
+	return  CheckNumber(arr, arrlength, Number) == -1;
 }
 
 
