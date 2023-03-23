@@ -48,7 +48,16 @@ short CheckNumber(int arr[100], int arrlength, int Number)
 	return -1;
 }
 
-		
+bool NumberInArray(int arr[100], int arrlength, int Number)
+{
+    if (CheckNumber(arr, arrlength, Number) == -1){
+         return true;
+    }
+
+	return  false;
+}
+
+
 
 int main()
 {
@@ -58,16 +67,23 @@ int main()
 	FillArray(arr, arrlength);
 	PrintArray(arr, arrlength);
 	int Number = ReadPositiveNumber("\n\nPlease enter a number to search");
-	int PositionNumber = CheckNumber(arr, arrlength, Number);
+	// int PositionNumber = CheckNumber(arr, arrlength, Number);
 
-	if (PositionNumber == -1)
+	// if (PositionNumber == -1)
+	// {
+	// 	cout << "\nthe number not found :-(" << endl;
+	// }
+	// else
+	// {
+	// 	cout << "\nthe number found at in position : " << PositionNumber << endl;
+	// 	cout << "\nthe number found its oreder : " << PositionNumber + 1 << endl;
+	if (NumberInArray(arr, arrlength, Number))
 	{
-		cout << "\nthe number not found :-(" << endl;
+			cout << "\nthe number not found :-(" << endl;
 	}
-	else 
-	{
-		cout << "\nthe number found at in position : " << PositionNumber << endl;
-		cout << "\nthe number found its oreder : " << PositionNumber + 1 << endl;
+	else {
+			cout << "\nthe number found :-)" << endl;
 	}
+
 	return 0;
 }
