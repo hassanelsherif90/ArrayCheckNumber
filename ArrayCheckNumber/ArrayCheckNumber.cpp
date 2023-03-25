@@ -43,7 +43,10 @@ short CheckNumber(int arr[100], int arrlength, int Number)
 {
 	for (int i = 0; i < arrlength; i++)
 	{
-		if (Number == arr[i])  {return i;}
+		if (Number == arr[i]) 
+		{
+			return i;
+		}
 	}
 	return -1;
 }
